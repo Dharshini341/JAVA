@@ -1,0 +1,44 @@
+//String arrays
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        String[] s=new String[n];
+        String ns="";
+        String temp="";
+        for(int i=0;i<n;i++)
+        {
+            s[i]=obj.next();
+            temp=s[i].toLowerCase();
+            int len=temp.length();
+            if((check(temp,0)==1) && (check(temp,len-1)==1))
+            {
+                ns=ns+temp;
+            }
+            
+        }
+        if(ns.isEmpty())
+        {
+            System.out.print("no matches found");
+        }
+        else
+        {
+            System.out.print(ns);
+        }
+        obj.close();
+        
+    }
+    
+    public static int check(String s,int n)
+    {
+        if(s.charAt(n)=='a' ||s.charAt(n)=='e'||s.charAt(n)=='i'|| s.charAt(n)=='o'|| s.charAt(n)=='u')
+        {
+            return 1;
+        }
+        return 0;
+    }
+}

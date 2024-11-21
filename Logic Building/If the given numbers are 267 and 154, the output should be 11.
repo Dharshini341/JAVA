@@ -1,0 +1,12 @@
+import java.util.*;
+public class digits{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=Math.abs(a%10);
+        int d=Math.abs(b%10);
+        int sum=c+d;
+        System.out.print(sum);
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.*;
+public class oddeven{
+    public static void main(String args[])
+    {
+        Scanner S=new Scanner(System.in);
+        int a=S.nextInt();
+        if(a%2==0){
+            System.out.println(1);
+        }
+        else{
+            System.out.print(2);
+        }
+        
+    }
+}

@@ -1,0 +1,72 @@
+//polymorphism
+import java.util.*;
+abstract class shape
+{
+    public abstract double calarea();
+}
+
+class circle extends shape
+{   double radius;
+    public circle(double radius)
+    {
+        this.radius=radius;
+    }
+    public double calarea()
+    {
+        return(Math.PI*radius*radius);
+    }
+}
+
+class rectangle extends shape
+{
+    double length;
+    double breadth;
+    public rectangle(double length,double breadth)
+    {
+        this.length=length;
+        this.breadth=breadth;
+    }
+    public double calarea()
+    {
+        return (length*breadth);
+    }
+}
+
+
+class triangle extends shape
+{
+    double b;
+    double h;
+    public triangle(double b,double h)
+    {
+        this.b=b;
+        this.h=h;
+    }
+    
+    public double calarea()
+    {
+        return (0.5*b*h);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        double r,l,b,base,height;
+        Scanner obj=new Scanner(System.in);
+        r=obj.nextDouble();
+        l=obj.nextDouble();
+        b=obj.nextDouble();
+        base=obj.nextDouble();
+        height=obj.nextDouble();
+        shape c=new circle(r);
+        shape rec=new rectangle(l,b);
+        shape t=new triangle(base,height);
+        System.out.printf("Area of a circle: %.2f%n",c.calarea());
+        System.out.printf("Area of a Rectangle: %.2f%n",rec.calarea());
+        System.out.printf("Area of a Triangle: %.2f%n",t.calarea());
+        obj.close();
+        
+    }
+}
